@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirstSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ERESTemplate" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -110,7 +110,7 @@
         <!--Second View Controller-->
         <scene sceneID="qLh-ab-cJ5">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="xIr-RD-AhU" customClass="SecondViewController" customModule="FirstSwift" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="xIr-RD-AhU" customClass="SecondViewController" customModule="ERESTemplate" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bop-Hp-yrR"/>
                         <viewControllerLayoutGuide type="bottom" id="RVg-EJ-pu9"/>
@@ -260,7 +260,7 @@
         <!--Details View Controller-->
         <scene sceneID="YYg-zH-F1a">
             <objects>
-                <viewController id="8lO-a3-xFZ" customClass="DetailsViewController" customModule="FirstSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8lO-a3-xFZ" customClass="DetailsViewController" customModule="ERESTemplate" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e6D-gL-IJ2"/>
                         <viewControllerLayoutGuide type="bottom" id="5pD-26-D3Y"/>
@@ -274,7 +274,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StackCell" rowHeight="100" id="gCL-Q6-Oh8" customClass="StackTableViewCell" customModule="FirstSwift" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StackCell" rowHeight="100" id="gCL-Q6-Oh8" customClass="StackTableViewCell" customModule="ERESTemplate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gCL-Q6-Oh8" id="EkV-EN-KmA">

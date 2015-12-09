@@ -86,9 +86,11 @@ class DLParserManager : SyncServiceManagerDelegate{
         
         array.enumerateObjectsUsingBlock({ object, index, stop in
             let model = DLDataModel()
-            var dict = NSString()
-            dict = (array.objectAtIndex(0).objectAtIndex(index).objectForKey("Service")?.objectForKey("NameEn") as! NSString)
-            print(model.name, dict)
+            model.name = (array.objectAtIndex(0).objectAtIndex(index).objectForKey("Service")?.objectForKey("NameEn") as! NSString)
+            model.date = (array.objectAtIndex(0).objectAtIndex(index).objectForKey("Service")?.objectForKey("NameEn") as! NSString)
+            
+            
+            print(model.name)
         })
         
     }

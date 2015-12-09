@@ -10,7 +10,7 @@ import Foundation
 
 class DLDataModel: NSObject {
     var name   = NSString()
-    let date   = NSString()
+    var date   = NSString()
     let number = NSString()
     let imgURL = NSString()
 }
