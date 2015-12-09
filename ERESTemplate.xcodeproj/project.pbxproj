@@ -21,6 +21,7 @@
 		BB3BB3231C12DCA400E2FC3E /* FirstSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB3221C12DCA400E2FC3E /* FirstSwiftUITests.swift */; };
 		BBB7EAA41C16B13400290C7B /* DLParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7EAA31C16B13400290C7B /* DLParseManager.swift */; };
 		BBB7EAA61C16B25000290C7B /* DLDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7EAA51C16B25000290C7B /* DLDataModel.swift */; };
+		BBDA8DA21C181D0300EF5707 /* NSDate+Utillities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDA8DA11C181D0300EF5707 /* NSDate+Utillities.swift */; };
 		BBE92A2F1C140A5B007C3C03 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE92A2E1C140A5B007C3C03 /* SecondViewController.swift */; };
 		BBE92A311C14268A007C3C03 /* UINavigationController+DLNavCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE92A301C14268A007C3C03 /* UINavigationController+DLNavCategory.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		BB3BB3241C12DCA400E2FC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBB7EAA31C16B13400290C7B /* DLParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLParseManager.swift; sourceTree = "<group>"; };
 		BBB7EAA51C16B25000290C7B /* DLDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLDataModel.swift; sourceTree = "<group>"; };
+		BBDA8DA11C181D0300EF5707 /* NSDate+Utillities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utillities.swift"; sourceTree = "<group>"; };
 		BBE92A2E1C140A5B007C3C03 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		BBE92A301C14268A007C3C03 /* UINavigationController+DLNavCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+DLNavCategory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				BBE92A301C14268A007C3C03 /* UINavigationController+DLNavCategory.swift */,
+				BBDA8DA11C181D0300EF5707 /* NSDate+Utillities.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -164,7 +167,7 @@
 		BB3BB3011C12DCA400E2FC3E /* FirstSwift */ = {
 			isa = PBXGroup;
 			children = (
-				BB3BB3021C12DCA400E2FC3E /* AppDelegate.swift */,
+				BBDA8DA31C182BA500EF5707 /* AppDelegate */,
 				BB2350191C15906600E4D3DC /* LibraryManagers */,
 				BB2350131C158FDC00E4D3DC /* ViewController */,
 				BB2350151C158FF800E4D3DC /* Cell */,
@@ -190,6 +193,14 @@
 				BB3BB3241C12DCA400E2FC3E /* Info.plist */,
 			);
 			path = FirstSwiftUITests;
+			sourceTree = "<group>";
+		};
+		BBDA8DA31C182BA500EF5707 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				BB3BB3021C12DCA400E2FC3E /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDA8DA21C181D0300EF5707 /* NSDate+Utillities.swift in Sources */,
 				BB2350181C15904500E4D3DC /* Reachability.swift in Sources */,
 				BBE92A2F1C140A5B007C3C03 /* SecondViewController.swift in Sources */,
 				BBB7EAA61C16B25000290C7B /* DLDataModel.swift in Sources */,

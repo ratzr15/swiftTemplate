@@ -11,6 +11,6 @@ import Foundation
 class DLDataModel: NSObject {
     var name   = NSString()
     var date   = NSString()
-    let number = NSString()
+    var number = NSNumber()
     let imgURL = NSString()
 }

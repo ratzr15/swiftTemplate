@@ -13,16 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()        
         view.backgroundColor = UIColor.orangeColor()
-        
-        let homeBtn: UIImage! = UIImage(named: "arrow-list-item-en")!
-        let imgLeft = UIImage(imageLiteral: "arrow-list-item-ar")
-        self.navigationController!.setLeftNavBarBtn(imgLeft, selctedImage: homeBtn, atTarget: self, action: nil, interaction: true)
-
         setNavigationTitle("Swift !!")
-
-    
-        
-        
         
     }
     @IBOutlet weak var btnPress: UIButton!
@@ -53,6 +44,12 @@ class ViewController: UIViewController {
         let font: UIFont = UIFont(name: "Helvetica", size: 18)!
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.translucent = false
+        
+        let homeBtn: UIImage! = UIImage(named: "arrow-list-item-en")!
+        let imgLeft = UIImage(imageLiteral: "arrow-list-item-ar")
+        self.navigationController!.setLeftNavBarBtn(imgLeft, selctedImage: homeBtn, atTarget: self, action: nil, interaction: true)
+        
+
     }
     
 

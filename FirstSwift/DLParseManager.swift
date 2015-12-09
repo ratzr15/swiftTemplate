@@ -18,7 +18,7 @@ protocol DLParserManagerDelegate {
     *  dated   :   7th Dec 2015
     *  author  :   rathish_citys@eres.com
     */
-    func syncServiceFailedWithErrorCode (error:String, forTag:NSInteger)
+    func parsingFailedWithError (error:String, forTag:NSInteger)
     
     /*!
     *	breif	:	service called has returned with image byte data
@@ -28,7 +28,8 @@ protocol DLParserManagerDelegate {
     *  dated   :   7th Dec 2015.
     *  author  :   rathish_citys@eres.com
     */
-    func syncServiceFinished (response: NSDictionary, forTag:NSInteger)
+    func parsingFinished (response: NSMutableArray, forTag:NSInteger)
+    
 }
 
 
@@ -36,10 +37,10 @@ class DLParserManager : SyncServiceManagerDelegate{
     
     var delegate : DLParserManagerDelegate?
     let dataModel = DLDataModel?()
-    var arrData   = NSArray()
-
+    var arrData   = NSMutableArray()
+    
     var syncServiceManager = DLSyncServiceManager?()
-
+    
     
     func sharedInstance() -> DLSyncServiceManager {
         if ((syncServiceManager) == nil) {
@@ -69,8 +70,8 @@ class DLParserManager : SyncServiceManagerDelegate{
         
         libParseResponseToFormModels(arr, tag: forTag)
     }
-
-     func checkForNULL(value: String) -> String {
+    
+    func checkForNULL(value: String) -> String {
         var strReturn: String
         if value.isKindOfClass(NSNull) {
             strReturn = ""
@@ -84,19 +85,18 @@ class DLParserManager : SyncServiceManagerDelegate{
     func libParseResponseToFormModels(array:NSArray, tag:NSInteger){
         print(array)
         
-        array.enumerateObjectsUsingBlock({ object, index, stop in
+        array[0].enumerateObjectsUsingBlock({ object, index, stop in
             let model = DLDataModel()
             model.name = (array.objectAtIndex(0).objectAtIndex(index).objectForKey("Service")?.objectForKey("NameEn") as! NSString)
-            model.date = (array.objectAtIndex(0).objectAtIndex(index).objectForKey("Service")?.objectForKey("NameEn") as! NSString)
+            model.date = (array.objectAtIndex(0).objectAtIndex(index).objectForKey("CreationDate") as! NSString)
+            model.number = (array.objectAtIndex(0).objectAtIndex(index).objectForKey("RequestID") as? NSNumber)!
+            self.arrData.addObject(model)
             
-            
-            print(model.name)
-        })
+        });
+        
+        self.delegate?.parsingFinished(arrData, forTag: 1)
         
     }
-    
-    
-    
     
     
     
