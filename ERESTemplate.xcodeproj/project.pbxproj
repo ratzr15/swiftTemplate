@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F6BD63A1C194806002781B1 /* DLUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BD6391C194806002781B1 /* DLUserDefault.swift */; };
+		3F6BD63C1C1977B0002781B1 /* RTUtilityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BD63B1C1977B0002781B1 /* RTUtilityClass.swift */; };
 		BB2350101C15638900E4D3DC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23500F1C15638900E4D3DC /* DetailsViewController.swift */; };
 		BB2350121C15764F00E4D3DC /* StackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2350111C15764F00E4D3DC /* StackTableViewCell.swift */; };
 		BB2350181C15904500E4D3DC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2350171C15904500E4D3DC /* Reachability.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		3F6BD6391C194806002781B1 /* DLUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLUserDefault.swift; sourceTree = "<group>"; };
+		3F6BD63B1C1977B0002781B1 /* RTUtilityClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTUtilityClass.swift; sourceTree = "<group>"; };
 		BB23500F1C15638900E4D3DC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		BB2350111C15764F00E4D3DC /* StackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTableViewCell.swift; sourceTree = "<group>"; };
 		BB2350171C15904500E4D3DC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				BBE92A301C14268A007C3C03 /* UINavigationController+DLNavCategory.swift */,
 				BBDA8DA11C181D0300EF5707 /* NSDate+Utillities.swift */,
 				3F6BD6391C194806002781B1 /* DLUserDefault.swift */,
+				3F6BD63B1C1977B0002781B1 /* RTUtilityClass.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBDA8DA21C181D0300EF5707 /* NSDate+Utillities.swift in Sources */,
+				3F6BD63C1C1977B0002781B1 /* RTUtilityClass.swift in Sources */,
 				BB2350181C15904500E4D3DC /* Reachability.swift in Sources */,
 				BBE92A2F1C140A5B007C3C03 /* SecondViewController.swift in Sources */,
 				BBB7EAA61C16B25000290C7B /* DLDataModel.swift in Sources */,
