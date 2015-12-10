@@ -26,9 +26,11 @@ class DetailsViewController: UIViewController, UITableViewDataSource, DLParserMa
         self.tableView.estimatedRowHeight = 120;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         //Service request Method
         invokeServiceToFetchData()
-    
     }
     
     func invokeServiceToFetchData(){
@@ -65,8 +67,6 @@ class DetailsViewController: UIViewController, UITableViewDataSource, DLParserMa
         return arrData.count
     }
     
-    /************* UITableView Delegates Methods **************/
-
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "StackCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier,forIndexPath: indexPath) as! StackTableViewCell

@@ -12,10 +12,41 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDelegate {
 
     var window: UIWindow?
-
+    var centerContainer: MMDrawerController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        /**/
+        /*!
+        *	breif	:	formatDate - formats date as per requirement
+        *	param	:	[NSString] - dateString*, date to be converted
+        *          :	[NSString] - format*    , expected date format
+        *  retun   :   void
+        *  dated   :   7th Dec 2015
+        *  author  :   rathish_citys@eres.com
+        */
+        func setUpMMDC(){
+            _ = self.window!.rootViewController
+            
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+            let leftViewController = mainStoryboard.instantiateViewControllerWithIdentifier("SideMenuVC") as! SideMenuViewController
+            let rightViewController = mainStoryboard.instantiateViewControllerWithIdentifier("SideMenuVC") as! SideMenuViewController
+            
+            let leftSideNav = UINavigationController(rootViewController: leftViewController)
+            let centerNav = UINavigationController(rootViewController: centerViewController)
+            _ = UINavigationController(rootViewController: rightViewController)
+            
+            centerContainer = MMDrawerController(centerViewController: centerNav, leftDrawerViewController: leftSideNav,rightDrawerViewController:nil)
+            centerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.All;
+            centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.All;
+            
+            window!.rootViewController = centerContainer
+            window!.makeKeyAndVisible()
+        }
+        
+        setUpMMDC()
         
         func getColorFromHex(rgbValue:UInt32)->UIColor{
             let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
@@ -29,6 +60,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
         navigationBarAppearace.barTintColor = getColorFromHex(0x102592)
         
         return true
+    }
+  
+    func application(application: UIApplication, viewControllerWithRestorationIdentifierPath identifierComponents: [AnyObject], coder: NSCoder) -> UIViewController? {
+        if let key = identifierComponents.last as? String {
+            if key == "Drawer" {
+                return self.window?.rootViewController
+            } else if key == "ExampleCenterNavigationControllerRestorationKey" {
+                return (self.window?.rootViewController as! MMDrawerController).centerViewController
+            } else if key == "ExampleRightNavigationControllerRestorationKey" {
+                return (self.window?.rootViewController as! MMDrawerController).rightDrawerViewController
+            } else if key == "ExampleLeftNavigationControllerRestorationKey" {
+                return (self.window?.rootViewController as! MMDrawerController).leftDrawerViewController
+            } else if key == "ExampleLeftSideDrawerController" {
+                if let leftVC = (self.window?.rootViewController as? MMDrawerController
+                    )?.leftDrawerViewController {
+                    if leftVC.isKindOfClass(UINavigationController) {
+                        return (leftVC as! UINavigationController).topViewController
+                    } else {
+                        return leftVC
+                    }
+                }
+            } else if key == "ExampleRightSideDrawerController" {
+                if let rightVC = (self.window?.rootViewController as? MMDrawerController)?.rightDrawerViewController {
+                    if rightVC.isKindOfClass(UINavigationController) {
+                        return (rightVC as! UINavigationController).topViewController
+                    } else {
+                        return rightVC
+                    }
+                }
+            }
+        }
+        
+        return nil
     }
 
     func applicationWillResignActive(application: UIApplication) {
