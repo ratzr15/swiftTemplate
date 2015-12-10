@@ -48,7 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
         
         setUpMMDC()
         
-        func getColorFromHex(rgbValue:UInt32)->UIColor{
+        //UnComment below if Nav Bar properties required in all views
+        
+       /* func getColorFromHex(rgbValue:UInt32)->UIColor{
             let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
             let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
             let blue = CGFloat(rgbValue & 0xFF)/256.0
@@ -56,8 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
         }
         
         let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = getColorFromHex(0xffffff)
-        navigationBarAppearace.barTintColor = getColorFromHex(0x102592)
+        navigationBarAppearace.tintColor = UIColor.clearColor()
+        navigationBarAppearace.barTintColor = UIColor.clearColor()*/
         
         return true
     }

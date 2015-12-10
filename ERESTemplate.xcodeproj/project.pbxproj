@@ -20,6 +20,13 @@
 		BB2895B41C1954E200BD950F /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2895AD1C1954E200BD950F /* MMDrawerVisualState.m */; };
 		BB2895B51C1954E200BD950F /* MMLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2895AF1C1954E200BD950F /* MMLogoView.m */; };
 		BB2895B61C1954E200BD950F /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2895B11C1954E200BD950F /* UIViewController+MMDrawerController.m */; };
+		BB2895BA1C196F3900BD950F /* SideViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2895B91C196F3900BD950F /* SideViewCell.swift */; };
+		BB2895C11C197D2F00BD950F /* SAStickyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2895BB1C197D2F00BD950F /* SAStickyHeaderView.swift */; };
+		BB2895C21C197D2F00BD950F /* SAStickyHeaderView+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2895BC1C197D2F00BD950F /* SAStickyHeaderView+Gesture.swift */; };
+		BB2895C31C197D2F00BD950F /* SAStickyHeaderView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2895BD1C197D2F00BD950F /* SAStickyHeaderView+Helper.swift */; };
+		BB2895C41C197D2F00BD950F /* SAStickyHeaderView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2895BE1C197D2F00BD950F /* SAStickyHeaderView+Image.swift */; };
+		BB2895C51C197D2F00BD950F /* SAStickyHeaderView+Observe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2895BF1C197D2F00BD950F /* SAStickyHeaderView+Observe.swift */; };
+		BB2895C61C197D2F00BD950F /* SAStickyHeaderView+Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2895C01C197D2F00BD950F /* SAStickyHeaderView+Scroll.swift */; };
 		BB3BB3031C12DCA400E2FC3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB3021C12DCA400E2FC3E /* AppDelegate.swift */; };
 		BB3BB3051C12DCA400E2FC3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB3041C12DCA400E2FC3E /* ViewController.swift */; };
 		BB3BB3081C12DCA400E2FC3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3BB3061C12DCA400E2FC3E /* Main.storyboard */; };
@@ -72,6 +79,13 @@
 		BB2895AF1C1954E200BD950F /* MMLogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLogoView.m; sourceTree = "<group>"; };
 		BB2895B01C1954E200BD950F /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
 		BB2895B11C1954E200BD950F /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		BB2895B91C196F3900BD950F /* SideViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewCell.swift; sourceTree = "<group>"; };
+		BB2895BB1C197D2F00BD950F /* SAStickyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAStickyHeaderView.swift; sourceTree = "<group>"; };
+		BB2895BC1C197D2F00BD950F /* SAStickyHeaderView+Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SAStickyHeaderView+Gesture.swift"; sourceTree = "<group>"; };
+		BB2895BD1C197D2F00BD950F /* SAStickyHeaderView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SAStickyHeaderView+Helper.swift"; sourceTree = "<group>"; };
+		BB2895BE1C197D2F00BD950F /* SAStickyHeaderView+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SAStickyHeaderView+Image.swift"; sourceTree = "<group>"; };
+		BB2895BF1C197D2F00BD950F /* SAStickyHeaderView+Observe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SAStickyHeaderView+Observe.swift"; sourceTree = "<group>"; };
+		BB2895C01C197D2F00BD950F /* SAStickyHeaderView+Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SAStickyHeaderView+Scroll.swift"; sourceTree = "<group>"; };
 		BB3BB2FF1C12DCA400E2FC3E /* ERESTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ERESTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3BB3021C12DCA400E2FC3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB3BB3041C12DCA400E2FC3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				BB2350111C15764F00E4D3DC /* StackTableViewCell.swift */,
+				BB2895B91C196F3900BD950F /* SideViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -172,6 +187,7 @@
 		BB28958F1C1945C600BD950F /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				BB2895C71C197D3400BD950F /* SAStickyHeader */,
 				BB2895B81C1954F200BD950F /* SwiftPages */,
 				BB2895B71C1954E800BD950F /* MMDrawer */,
 				BB2895A61C1954E100BD950F /* ERESTemplate-Bridging-Header.h */,
@@ -203,6 +219,19 @@
 				BB28958D1C1945C100BD950F /* SwiftPages.swift */,
 			);
 			name = SwiftPages;
+			sourceTree = "<group>";
+		};
+		BB2895C71C197D3400BD950F /* SAStickyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				BB2895BB1C197D2F00BD950F /* SAStickyHeaderView.swift */,
+				BB2895BC1C197D2F00BD950F /* SAStickyHeaderView+Gesture.swift */,
+				BB2895BD1C197D2F00BD950F /* SAStickyHeaderView+Helper.swift */,
+				BB2895BE1C197D2F00BD950F /* SAStickyHeaderView+Image.swift */,
+				BB2895BF1C197D2F00BD950F /* SAStickyHeaderView+Observe.swift */,
+				BB2895C01C197D2F00BD950F /* SAStickyHeaderView+Scroll.swift */,
+			);
+			name = SAStickyHeader;
 			sourceTree = "<group>";
 		};
 		BB3BB2F61C12DCA400E2FC3E = {
@@ -398,16 +427,23 @@
 			files = (
 				BBDA8DA21C181D0300EF5707 /* NSDate+Utillities.swift in Sources */,
 				BB2350181C15904500E4D3DC /* Reachability.swift in Sources */,
+				BB2895C51C197D2F00BD950F /* SAStickyHeaderView+Observe.swift in Sources */,
+				BB2895C61C197D2F00BD950F /* SAStickyHeaderView+Scroll.swift in Sources */,
+				BB2895C11C197D2F00BD950F /* SAStickyHeaderView.swift in Sources */,
+				BB2895C41C197D2F00BD950F /* SAStickyHeaderView+Image.swift in Sources */,
 				BB2895B31C1954E200BD950F /* MMDrawerController.m in Sources */,
 				BB28958E1C1945C100BD950F /* SwiftPages.swift in Sources */,
 				BBE92A2F1C140A5B007C3C03 /* SecondViewController.swift in Sources */,
 				BB2895A41C1951C200BD950F /* SideMenuViewController.swift in Sources */,
 				BBB7EAA61C16B25000290C7B /* DLDataModel.swift in Sources */,
+				BB2895BA1C196F3900BD950F /* SideViewCell.swift in Sources */,
 				BB2895B61C1954E200BD950F /* UIViewController+MMDrawerController.m in Sources */,
 				BBE92A311C14268A007C3C03 /* UINavigationController+DLNavCategory.swift in Sources */,
 				BB2895B41C1954E200BD950F /* MMDrawerVisualState.m in Sources */,
+				BB2895C31C197D2F00BD950F /* SAStickyHeaderView+Helper.swift in Sources */,
 				BB2895B21C1954E200BD950F /* MMDrawerBarButtonItem.m in Sources */,
 				BBB7EAA41C16B13400290C7B /* DLParseManager.swift in Sources */,
+				BB2895C21C197D2F00BD950F /* SAStickyHeaderView+Gesture.swift in Sources */,
 				3F6BD63A1C194806002781B1 /* DLUserDefault.swift in Sources */,
 				BB2350121C15764F00E4D3DC /* StackTableViewCell.swift in Sources */,
 				BB3BB3051C12DCA400E2FC3E /* ViewController.swift in Sources */,

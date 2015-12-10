@@ -58,12 +58,12 @@
                   moduleName = "ERESTemplate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Rathish/Documents/Rathish/SampleProjects/ERESTemplate/FirstSwift/DetailsViewController.swift"
-                  timestampString = "471425347.290637"
+                  timestampString = "471428806.197216"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,12 +73,12 @@
                   moduleName = "ERESTemplate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Rathish/Documents/Rathish/SampleProjects/ERESTemplate/FirstSwift/DetailsViewController.swift"
-                  timestampString = "471425347.290968"
+                  timestampString = "471428806.197485"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "68">
+                  offsetFromSymbolStart = "58">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -88,12 +88,12 @@
                   moduleName = "ERESTemplate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Rathish/Documents/Rathish/SampleProjects/ERESTemplate/FirstSwift/DetailsViewController.swift"
-                  timestampString = "471425347.291288"
+                  timestampString = "471428806.19777"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "28">
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>

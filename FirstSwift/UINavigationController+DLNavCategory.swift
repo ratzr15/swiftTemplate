@@ -28,6 +28,8 @@ extension UINavigationController {
         button.frame = CGRectMake(0, 0,  image.size.width,  image.size.width)
         button .addTarget(atTarget, action: action, forControlEvents: UIControlEvents.TouchUpInside)
         self.topViewController?.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+        
+             
 }
     
 

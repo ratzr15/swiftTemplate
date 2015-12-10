@@ -23,29 +23,56 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="R42-ix-8fD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SideCell" focusStyle="custom" rowHeight="44" id="R42-ix-8fD" customClass="SideViewCell" customModule="ERESTemplate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R42-ix-8fD" id="CNY-qN-8aI">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQA-gt-8tK">
-                                                    <rect key="frame" x="562" y="7" width="30" height="30"/>
-                                                    <animations/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Row title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOm-ji-ris">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Row title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOm-ji-ris">
                                                     <rect key="frame" x="8" y="12" width="546" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="active-case-tile" translatesAutoresizingMaskIntoConstraints="NO" id="TQA-gt-8tK">
+                                                    <rect key="frame" x="562" y="7" width="30" height="30"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="4u2-lk-Tzl"/>
+                                                        <constraint firstAttribute="height" constant="30" id="uat-7H-JLl"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TQA-gt-8tK" secondAttribute="trailing" id="BaE-5V-Ofu">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="19"/>
+                                                </constraint>
+                                                <constraint firstAttribute="leadingMargin" secondItem="SOm-ji-ris" secondAttribute="leading" id="DMN-bY-b2V"/>
+                                                <constraint firstItem="SOm-ji-ris" firstAttribute="top" secondItem="CNY-qN-8aI" secondAttribute="topMargin" constant="4" id="NHr-OL-8V9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SOm-ji-ris" secondAttribute="trailing" constant="38" id="Rwf-J5-m5u"/>
+                                                <constraint firstItem="TQA-gt-8tK" firstAttribute="leading" secondItem="SOm-ji-ris" secondAttribute="trailing" constant="8" id="WOn-RR-w9j">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="61"/>
+                                                </constraint>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SOm-ji-ris" secondAttribute="bottom" constant="3" id="XUk-aT-3L6"/>
+                                                <constraint firstItem="TQA-gt-8tK" firstAttribute="centerY" secondItem="CNY-qN-8aI" secondAttribute="centerY" id="w9n-hL-FDi"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Rwf-J5-m5u"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <color key="backgroundColor" red="1" green="0.1149516448" blue="0.23038467979999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="imgViewIcon" destination="TQA-gt-8tK" id="BhF-rj-qC0"/>
+                                            <outlet property="lblRow" destination="SOm-ji-ris" id="FVM-J7-drj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -63,13 +90,14 @@
                             <constraint firstItem="VPf-FP-8Wq" firstAttribute="top" secondItem="lyu-rP-sST" secondAttribute="bottom" constant="-20" id="yWb-IS-s05"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="VPf-FP-8Wq" id="e8A-Ja-M6b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZ4-Tr-97a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="-384"/>
+            <point key="canvasLocation" x="445.5" y="-423"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -473,4 +501,7 @@
             <point key="canvasLocation" x="136.5" y="307.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="active-case-tile" width="50" height="50"/>
+    </resources>
 </document>
