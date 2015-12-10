@@ -14,6 +14,13 @@
 		BB2350181C15904500E4D3DC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2350171C15904500E4D3DC /* Reachability.swift */; };
 		BB23501B1C1594DF00E4D3DC /* DLSyncServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23501A1C1594DF00E4D3DC /* DLSyncServiceManager.swift */; };
 		BB23501D1C159CAE00E4D3DC /* DLSyncConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23501C1C1598FC00E4D3DC /* DLSyncConstants.swift */; };
+		BB28958E1C1945C100BD950F /* SwiftPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28958D1C1945C100BD950F /* SwiftPages.swift */; };
+		BB2895A41C1951C200BD950F /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2895A31C1951C200BD950F /* SideMenuViewController.swift */; };
+		BB2895B21C1954E200BD950F /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2895A81C1954E200BD950F /* MMDrawerBarButtonItem.m */; };
+		BB2895B31C1954E200BD950F /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2895AA1C1954E200BD950F /* MMDrawerController.m */; };
+		BB2895B41C1954E200BD950F /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2895AD1C1954E200BD950F /* MMDrawerVisualState.m */; };
+		BB2895B51C1954E200BD950F /* MMLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2895AF1C1954E200BD950F /* MMLogoView.m */; };
+		BB2895B61C1954E200BD950F /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2895B11C1954E200BD950F /* UIViewController+MMDrawerController.m */; };
 		BB3BB3031C12DCA400E2FC3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB3021C12DCA400E2FC3E /* AppDelegate.swift */; };
 		BB3BB3051C12DCA400E2FC3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB3041C12DCA400E2FC3E /* ViewController.swift */; };
 		BB3BB3081C12DCA400E2FC3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3BB3061C12DCA400E2FC3E /* Main.storyboard */; };
@@ -53,6 +60,20 @@
 		BB2350171C15904500E4D3DC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		BB23501A1C1594DF00E4D3DC /* DLSyncServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSyncServiceManager.swift; sourceTree = "<group>"; };
 		BB23501C1C1598FC00E4D3DC /* DLSyncConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSyncConstants.swift; sourceTree = "<group>"; };
+		BB28958D1C1945C100BD950F /* SwiftPages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPages.swift; sourceTree = "<group>"; };
+		BB2895A31C1951C200BD950F /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		BB2895A61C1954E100BD950F /* ERESTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ERESTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
+		BB2895A71C1954E200BD950F /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		BB2895A81C1954E200BD950F /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		BB2895A91C1954E200BD950F /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		BB2895AA1C1954E200BD950F /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		BB2895AB1C1954E200BD950F /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		BB2895AC1C1954E200BD950F /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		BB2895AD1C1954E200BD950F /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		BB2895AE1C1954E200BD950F /* MMLogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLogoView.h; sourceTree = "<group>"; };
+		BB2895AF1C1954E200BD950F /* MMLogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLogoView.m; sourceTree = "<group>"; };
+		BB2895B01C1954E200BD950F /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		BB2895B11C1954E200BD950F /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		BB3BB2FF1C12DCA400E2FC3E /* ERESTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ERESTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3BB3021C12DCA400E2FC3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB3BB3041C12DCA400E2FC3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +126,7 @@
 				BB3BB3041C12DCA400E2FC3E /* ViewController.swift */,
 				BBE92A2E1C140A5B007C3C03 /* SecondViewController.swift */,
 				BB23500F1C15638900E4D3DC /* DetailsViewController.swift */,
+				BB2895A31C1951C200BD950F /* SideMenuViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -150,6 +172,42 @@
 			name = LibraryManagers;
 			sourceTree = "<group>";
 		};
+		BB28958F1C1945C600BD950F /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				BB2895B81C1954F200BD950F /* SwiftPages */,
+				BB2895B71C1954E800BD950F /* MMDrawer */,
+				BB2895A61C1954E100BD950F /* ERESTemplate-Bridging-Header.h */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		BB2895B71C1954E800BD950F /* MMDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				BB2895A71C1954E200BD950F /* MMDrawerBarButtonItem.h */,
+				BB2895A81C1954E200BD950F /* MMDrawerBarButtonItem.m */,
+				BB2895A91C1954E200BD950F /* MMDrawerController.h */,
+				BB2895AA1C1954E200BD950F /* MMDrawerController.m */,
+				BB2895AB1C1954E200BD950F /* MMDrawerController+Subclass.h */,
+				BB2895AC1C1954E200BD950F /* MMDrawerVisualState.h */,
+				BB2895AD1C1954E200BD950F /* MMDrawerVisualState.m */,
+				BB2895AE1C1954E200BD950F /* MMLogoView.h */,
+				BB2895AF1C1954E200BD950F /* MMLogoView.m */,
+				BB2895B01C1954E200BD950F /* UIViewController+MMDrawerController.h */,
+				BB2895B11C1954E200BD950F /* UIViewController+MMDrawerController.m */,
+			);
+			name = MMDrawer;
+			sourceTree = "<group>";
+		};
+		BB2895B81C1954F200BD950F /* SwiftPages */ = {
+			isa = PBXGroup;
+			children = (
+				BB28958D1C1945C100BD950F /* SwiftPages.swift */,
+			);
+			name = SwiftPages;
+			sourceTree = "<group>";
+		};
 		BB3BB2F61C12DCA400E2FC3E = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +236,7 @@
 				BB2350131C158FDC00E4D3DC /* ViewController */,
 				BB2350151C158FF800E4D3DC /* Cell */,
 				BB2350141C158FEC00E4D3DC /* Utility */,
+				BB28958F1C1945C600BD950F /* ThirdParty */,
 				BB2350161C15901200E4D3DC /* ResourceManagers */,
 			);
 			path = FirstSwift;
@@ -343,15 +402,22 @@
 				BBDA8DA21C181D0300EF5707 /* NSDate+Utillities.swift in Sources */,
 				3F6BD63C1C1977B0002781B1 /* RTUtilityClass.swift in Sources */,
 				BB2350181C15904500E4D3DC /* Reachability.swift in Sources */,
+				BB2895B31C1954E200BD950F /* MMDrawerController.m in Sources */,
+				BB28958E1C1945C100BD950F /* SwiftPages.swift in Sources */,
 				BBE92A2F1C140A5B007C3C03 /* SecondViewController.swift in Sources */,
+				BB2895A41C1951C200BD950F /* SideMenuViewController.swift in Sources */,
 				BBB7EAA61C16B25000290C7B /* DLDataModel.swift in Sources */,
+				BB2895B61C1954E200BD950F /* UIViewController+MMDrawerController.m in Sources */,
 				BBE92A311C14268A007C3C03 /* UINavigationController+DLNavCategory.swift in Sources */,
+				BB2895B41C1954E200BD950F /* MMDrawerVisualState.m in Sources */,
+				BB2895B21C1954E200BD950F /* MMDrawerBarButtonItem.m in Sources */,
 				BBB7EAA41C16B13400290C7B /* DLParseManager.swift in Sources */,
 				3F6BD63A1C194806002781B1 /* DLUserDefault.swift in Sources */,
 				BB2350121C15764F00E4D3DC /* StackTableViewCell.swift in Sources */,
 				BB3BB3051C12DCA400E2FC3E /* ViewController.swift in Sources */,
 				BB3BB3031C12DCA400E2FC3E /* AppDelegate.swift in Sources */,
 				BB23501B1C1594DF00E4D3DC /* DLSyncServiceManager.swift in Sources */,
+				BB2895B51C1954E200BD950F /* MMLogoView.m in Sources */,
 				BB23501D1C159CAE00E4D3DC /* DLSyncConstants.swift in Sources */,
 				BB2350101C15638900E4D3DC /* DetailsViewController.swift in Sources */,
 			);
@@ -495,10 +561,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FirstSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eres.ae.FirstSwift;
 				PRODUCT_NAME = ERESTemplate;
+				SWIFT_OBJC_BRIDGING_HEADER = "FirstSwift/ERESTemplate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -506,10 +576,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FirstSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eres.ae.FirstSwift;
 				PRODUCT_NAME = ERESTemplate;
+				SWIFT_OBJC_BRIDGING_HEADER = "FirstSwift/ERESTemplate-Bridging-Header.h";
 			};
 			name = Release;
 		};

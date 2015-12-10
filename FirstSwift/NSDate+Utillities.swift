@@ -12,6 +12,15 @@ import UIKit
 
 extension NSDate {
    
+    /*!
+    *	breif	:	formatDate - formats date as per requirement
+    *	param	:	[NSString] - dateString*, date to be converted
+    *          :	[NSString] - format*    , expected date format
+    *  retun   :   void
+    *  dated   :   7th Dec 2015
+    *  author  :   rathish_citys@eres.com
+    */
+
     class func formatDate (dateString:NSString, format:NSString) ->NSString{
         let currentFormat = NSDateFormatter()
         currentFormat.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"

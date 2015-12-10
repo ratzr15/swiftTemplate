@@ -11,6 +11,15 @@ import UIKit
 
 extension UINavigationController {
     
+    /*!
+    *	breif	:	setLeftNavBarBtn - Sets up navigation button -left/right with specified image
+    *	param	:	[UIImage] - selecteddimg*     , img when button is pressed
+    *          :	[UIImage] - image*    , target img
+    *  retun   :   void
+    *  dated   :   7th Dec 2015
+    *  author  :   rathish_citys@eres.com
+    */
+
     func setLeftNavBarBtn (image:UIImage, selctedImage:UIImage, atTarget:AnyObject, action:Selector, interaction:Bool){
         let button = UIButton(type: UIButtonType.Custom)
         button.userInteractionEnabled = true;

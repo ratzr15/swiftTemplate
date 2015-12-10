@@ -16,7 +16,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.redColor()
         
-        setNavigationTitle("Swift Me !!")
+        //setNavigationTitle("Swift Me !!")
         
     }
 
