@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6BD63A1C194806002781B1 /* DLUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BD6391C194806002781B1 /* DLUserDefault.swift */; };
 		BB2350101C15638900E4D3DC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23500F1C15638900E4D3DC /* DetailsViewController.swift */; };
 		BB2350121C15764F00E4D3DC /* StackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2350111C15764F00E4D3DC /* StackTableViewCell.swift */; };
 		BB2350181C15904500E4D3DC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2350171C15904500E4D3DC /* Reachability.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F6BD6391C194806002781B1 /* DLUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLUserDefault.swift; sourceTree = "<group>"; };
 		BB23500F1C15638900E4D3DC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		BB2350111C15764F00E4D3DC /* StackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTableViewCell.swift; sourceTree = "<group>"; };
 		BB2350171C15904500E4D3DC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				BBE92A301C14268A007C3C03 /* UINavigationController+DLNavCategory.swift */,
 				BBDA8DA11C181D0300EF5707 /* NSDate+Utillities.swift */,
+				3F6BD6391C194806002781B1 /* DLUserDefault.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				BBB7EAA61C16B25000290C7B /* DLDataModel.swift in Sources */,
 				BBE92A311C14268A007C3C03 /* UINavigationController+DLNavCategory.swift in Sources */,
 				BBB7EAA41C16B13400290C7B /* DLParseManager.swift in Sources */,
+				3F6BD63A1C194806002781B1 /* DLUserDefault.swift in Sources */,
 				BB2350121C15764F00E4D3DC /* StackTableViewCell.swift in Sources */,
 				BB3BB3051C12DCA400E2FC3E /* ViewController.swift in Sources */,
 				BB3BB3031C12DCA400E2FC3E /* AppDelegate.swift in Sources */,
