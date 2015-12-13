@@ -28,10 +28,11 @@ let SegueToDetailViewController = "DetailsVC"
 
 // MARK: - Bool
 
-enum isArabic {
+enum isArabicEnum {
     case isTrue, isFalse
 }
 
+var isArabic = true
 
 // MARK: - Enums
 
@@ -76,11 +77,5 @@ let kBGColor        = "#FD752E"
 let kBGColor1       = "#FD8D40"
 let kBGColor2       = "#FD7C34"
 let kBGColor3       = "#FD6926"
-
-
-
-
-let IPAD     UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
-
 
 

@@ -26,6 +26,8 @@ class SecondViewController: UIViewController {
         let parserManager = DLParserManager()
         parserManager.sharedInstance()
         
+        isArabic.isTrue
+        
         
     }
     
