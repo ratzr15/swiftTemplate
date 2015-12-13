@@ -13,6 +13,8 @@ import Foundation
 class RTUtilityClass: NSObject {
     static let sharedInstance = RTUtilityClass()
     
+    
+    
    class  func colorFromHex(hexString:String) -> UIColor{
         var rgb: UInt32 = 0
         let scanner = NSScanner(string: hexString)
@@ -77,6 +79,121 @@ class RTUtilityClass: NSObject {
         return labelToConvert
 
     }
+    
+    func checkForNULL(value : AnyObject?) -> AnyObject? {
+        let strReturn:AnyObject!
+        if value is NSNull {
+            strReturn = ""
+        } else {
+            strReturn = value
+        }
+        
+        return strReturn
+    }
+    
+    func setTitleLabel(title:String) -> UILabel {
+        
+        let label = UILabel(frame:CGRectMake(0,0, 190, 40))
+        label.text = title;
+        label.textColor = UIColor.whiteColor()
+        label.backgroundColor = UIColor.clearColor()
+        label.textAlignment = NSTextAlignment.Center;
+        
+        var lblfont = UIFont(name: "HelveticaNeue", size: 5)!
+        if(!RTUtilityClass.isUserUsingAnIpad()){
+            
+            if isArabic {
+                lblfont = UIFont(name: "Droid Arabic Kufi", size: 5)!
+
+            }
+            else{
+                lblfont = UIFont(name: "RobotoCondensed-Bold", size: 18)!
+            }
+
+        }
+        else{
+            if isArabic {
+                lblfont = UIFont(name: "Droid Arabic Kufi", size: 25)!
+            }
+            else{
+                lblfont = UIFont(name: "RobotoCondensed-Bold", size: 23)!
+            }
+        }
+        
+        
+        label.font = lblfont
+        return label
+        
+    }
+
+    func getImageName(value:NSString) -> NSString {
+        let strImageName:NSString
+        if isArabic {
+            strImageName = NSString(format: "%@-ar",value)
+        }
+        else{
+            strImageName = NSString(format: "%@-en",value)
+        }
+        return strImageName
+    }
+    
+    func getNoLabelFont() -> UIFont{
+        var lblfont:UIFont!
+        if(!RTUtilityClass.isUserUsingAnIpad()){
+            
+            if isArabic {
+                lblfont = UIFont(name: "Droid Arabic Kufi", size: 18)!
+            }
+            else{
+                lblfont = UIFont(name: "RobotoCondensed-Bold", size: 22)!
+            }
+            
+        }
+        else{
+            if isArabic {
+                lblfont = UIFont(name: "Droid Arabic Kufi", size: 20)!
+            }
+            else{
+                lblfont = UIFont(name: "RobotoCondensed-Bold", size: 25)!
+            }
+        }
+        
+        return lblfont
+    }
+    
+    func getTitle(title:String) -> UILabel {
+        
+        let label = UILabel(frame:CGRectMake(0,0, 120, 64))
+        label.text = title;
+        label.textColor = UIColor.whiteColor()
+        label.backgroundColor = UIColor.clearColor()
+        label.textAlignment = NSTextAlignment.Center;
+        
+        var lblfont:UIFont!
+        if(!RTUtilityClass.isUserUsingAnIpad()){
+            
+            if isArabic {
+                lblfont = UIFont(name: "Droid Arabic Kufi", size: 18)!
+            }
+            else{
+                lblfont = UIFont(name: "RobotoCondensed-Bold", size: 18)!
+            }
+            
+        }
+        else{
+            if isArabic {
+                lblfont = UIFont(name: "Droid Arabic Kufi", size: 25)!
+            }
+            else{
+                lblfont = UIFont(name: "RobotoCondensed-Bold", size: 25)!
+            }
+        }
+        
+        label.font = lblfont
+        return label
+        
+    }
+
     
     class func isUserUsingAnIpad() -> Bool {
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.Pad) {
