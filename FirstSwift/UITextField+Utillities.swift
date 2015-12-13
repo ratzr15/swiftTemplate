@@ -13,7 +13,7 @@ import UIKit
 extension UITextField{
     
     /*
-    *  breif   :   Its used to Make the Normal textField As per the design
+    *  breif   :   Make the Default textField As per the design
     *  dated   :   1/28/14.
     *  author  :   rathish_citys@eres.ae
     */
@@ -75,10 +75,10 @@ extension UITextField{
         self.textColor = RTUtilityClass.colorFromHex("");
         self.backgroundColor = RTUtilityClass.colorFromHex("");
         self.userInteractionEnabled = true
-     
+        
         let str: NSAttributedString = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: RTUtilityClass.colorFromHex(kTextColor)])
         self.attributedPlaceholder = str
-
+        
         //Left Padding view
         let paddingView = UIView?()
         
@@ -122,11 +122,11 @@ extension UITextField{
         self.rightViewMode = UITextFieldViewMode.Always;
         self.autocorrectionType = UITextAutocorrectionType.No;
     }
-
-    /* 
+    
+    /*
     *  func    :   formatAndValidateUAEMobNo
     *  breif   :   Formats and validates the inputted mobile number with proper format(12 digits)
-    *  usage   :   1.Call this methods UITextField - Should change characters in range to validate and format number 
+    *  usage   :   1.Call this methods UITextField - Should change characters in range to validate and format number
                :   2. Can also be used to return formatted number as standalone function
     *  dated   :   13/12/15
     *  author  :   rathish_citys@eres.ae
@@ -136,7 +136,7 @@ extension UITextField{
         
         var arrMobInitials = NSArray()
         arrMobInitials = ["59", "50", "51", "52", "55", "56", "70"]
-
+        
         mobileNumber = mobileNumber.stringByReplacingOccurrencesOfString("00", withString: "")
         mobileNumber = mobileNumber.stringByReplacingOccurrencesOfString(")", withString: "")
         mobileNumber = mobileNumber.stringByReplacingOccurrencesOfString(" ", withString: "")
@@ -194,6 +194,58 @@ extension UITextField{
         if wrong {
             mobileNumber = ""
             print("Worng number format!")
+        }
+        return mobileNumber as String
+    }
+    
+    /*
+    *  func    :   formatAndValidateMobNo
+    *  breif   :   Formats and validates the inputted mobile number with proper format(12 digits)
+    *  usage   :   1.Call this methods UITextField - Should change characters in range to validate and format number
+               :   2. Can also be used to return formatted number as standalone function
+    *  dated   :   13/12/15
+    *  author  :   rathish_citys@eres.ae
+    */
+    
+    func formatAndValidateMobNo(var mobileNumber: NSString, var showAlert wrong: Bool) -> String {
+        wrong = false
+        mobileNumber = mobileNumber.stringByReplacingOccurrencesOfString("00", withString: "")
+        mobileNumber = mobileNumber.stringByReplacingOccurrencesOfString(")", withString: "")
+        mobileNumber = mobileNumber.stringByReplacingOccurrencesOfString(" ", withString: "")
+        mobileNumber = mobileNumber.stringByReplacingOccurrencesOfString("-", withString: "")
+        mobileNumber = mobileNumber.stringByReplacingOccurrencesOfString("+", withString: "")
+        
+        let length: Int = mobileNumber.length
+        
+        if length == 12 {
+            let countryCode: NSString = mobileNumber.substringToIndex(3).stringByReplacingOccurrencesOfString("00", withString: "")
+            let phoneNo: NSString = mobileNumber.substringFromIndex(3)
+            mobileNumber = "\(countryCode)\(phoneNo)"
+            return mobileNumber as String
+        }
+        else {
+            if length == 10 {
+                mobileNumber = "\("971")\(mobileNumber.substringFromIndex(length - 9))"
+                // Replace country code
+                return mobileNumber as String
+            }
+            else {
+                if length == 9 {
+                    let zero: String = mobileNumber.substringToIndex(1)
+                    if (zero != "0"){
+                        mobileNumber = "\("971")\(mobileNumber.substringFromIndex(length - 9))"
+                        return mobileNumber as String
+                    }
+                }
+                else {
+                    wrong = true
+                }
+            }
+        }
+        /* When above validations fail : return null and display error msg */
+        if wrong {
+            mobileNumber = ""
+            wrong = true
         }
         return mobileNumber as String
     }
