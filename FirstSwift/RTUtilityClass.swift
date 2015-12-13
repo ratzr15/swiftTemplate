@@ -13,7 +13,7 @@ import Foundation
 class RTUtilityClass: NSObject {
     static let sharedInstance = RTUtilityClass()
     
-    func colorFromHex(hexString:String) -> UIColor{
+   class  func colorFromHex(hexString:String) -> UIColor{
         var rgb: UInt32 = 0
         let scanner = NSScanner(string: hexString)
         scanner.scanLocation = 1;
@@ -78,5 +78,12 @@ class RTUtilityClass: NSObject {
 
     }
     
+    class func isUserUsingAnIpad() -> Bool {
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.Pad) {
+            return true
+        } else {
+            return false
+        }
+    }
 
 }
