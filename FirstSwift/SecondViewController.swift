@@ -17,7 +17,6 @@ class SecondViewController: UIViewController {
         view.backgroundColor = UIColor.redColor()
         
         //setNavigationTitle("Swift Me !!")
-        
     }
 
     @IBAction func actionSignUp(sender: AnyObject) {
@@ -25,10 +24,7 @@ class SecondViewController: UIViewController {
         
         let parserManager = DLParserManager()
         parserManager.sharedInstance()
-        
-        isArabic.isTrue
-        
-        
+                
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
