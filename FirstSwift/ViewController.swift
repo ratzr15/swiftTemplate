@@ -44,6 +44,24 @@ class ViewController: UIViewController {
       
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let hasViewedWalkthrough = defaults.boolForKey("hasViewedWalkthrough")
+        
+        if hasViewedWalkthrough {
+            return
+        }
+        
+        if let pageViewController =
+            storyboard?.instantiateViewControllerWithIdentifier("WalkthroughController")
+                as? WalkthroughPageVC {
+                    presentViewController(pageViewController, animated: true, completion: nil)
+        }
+    }
+    
+
     func setupLeftMenuButton() {
         let leftDrawerButton = MMDrawerBarButtonItem(target: self, action: "leftDrawerButtonPress:")
         self.navigationItem.setLeftBarButtonItem(leftDrawerButton, animated: true)
