@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F6BD63A1C194806002781B1 /* DLUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BD6391C194806002781B1 /* DLUserDefault.swift */; };
 		3F6BD63C1C1977B0002781B1 /* RTUtilityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BD63B1C1977B0002781B1 /* RTUtilityClass.swift */; };
+		BB129A4F1C27EC6C003E79B7 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB129A4E1C27EC6C003E79B7 /* CustomSearchBar.swift */; };
+		BB129A511C27EDC1003E79B7 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB129A501C27EDC1003E79B7 /* CustomSearchController.swift */; };
 		BB2350101C15638900E4D3DC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23500F1C15638900E4D3DC /* DetailsViewController.swift */; };
 		BB2350121C15764F00E4D3DC /* StackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2350111C15764F00E4D3DC /* StackTableViewCell.swift */; };
 		BB2350181C15904500E4D3DC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2350171C15904500E4D3DC /* Reachability.swift */; };
@@ -66,6 +68,8 @@
 /* Begin PBXFileReference section */
 		3F6BD6391C194806002781B1 /* DLUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLUserDefault.swift; sourceTree = "<group>"; };
 		3F6BD63B1C1977B0002781B1 /* RTUtilityClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTUtilityClass.swift; sourceTree = "<group>"; };
+		BB129A4E1C27EC6C003E79B7 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		BB129A501C27EDC1003E79B7 /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		BB23500F1C15638900E4D3DC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		BB2350111C15764F00E4D3DC /* StackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTableViewCell.swift; sourceTree = "<group>"; };
 		BB2350171C15904500E4D3DC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -141,6 +145,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB129A521C27EDD7003E79B7 /* CustomSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				BB129A501C27EDC1003E79B7 /* CustomSearchController.swift */,
+				BB129A4E1C27EC6C003E79B7 /* CustomSearchBar.swift */,
+			);
+			name = CustomSearchBar;
+			sourceTree = "<group>";
+		};
 		BB2350131C158FDC00E4D3DC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +215,7 @@
 		BB28958F1C1945C600BD950F /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				BB129A521C27EDD7003E79B7 /* CustomSearchBar */,
 				BB2895C71C197D3400BD950F /* SAStickyHeader */,
 				BB2895B81C1954F200BD950F /* SwiftPages */,
 				BB2895B71C1954E800BD950F /* MMDrawer */,
@@ -450,6 +464,7 @@
 				BB55F4C11C1D3FDE004CB092 /* UITextField+Utillities.swift in Sources */,
 				BB2895C11C197D2F00BD950F /* SAStickyHeaderView.swift in Sources */,
 				BB2895C41C197D2F00BD950F /* SAStickyHeaderView+Image.swift in Sources */,
+				BB129A511C27EDC1003E79B7 /* CustomSearchController.swift in Sources */,
 				BB2895B31C1954E200BD950F /* MMDrawerController.m in Sources */,
 				BB28958E1C1945C100BD950F /* SwiftPages.swift in Sources */,
 				BBE92A2F1C140A5B007C3C03 /* SecondViewController.swift in Sources */,
@@ -460,6 +475,7 @@
 				BBE92A311C14268A007C3C03 /* UINavigationController+DLNavCategory.swift in Sources */,
 				BB2895B41C1954E200BD950F /* MMDrawerVisualState.m in Sources */,
 				BB2895C31C197D2F00BD950F /* SAStickyHeaderView+Helper.swift in Sources */,
+				BB129A4F1C27EC6C003E79B7 /* CustomSearchBar.swift in Sources */,
 				BB2895B21C1954E200BD950F /* MMDrawerBarButtonItem.m in Sources */,
 				BBB7EAA41C16B13400290C7B /* DLParseManager.swift in Sources */,
 				BB2895C21C197D2F00BD950F /* SAStickyHeaderView+Gesture.swift in Sources */,
