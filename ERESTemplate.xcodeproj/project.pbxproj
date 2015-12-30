@@ -38,6 +38,8 @@
 		BB3BB3231C12DCA400E2FC3E /* FirstSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BB3221C12DCA400E2FC3E /* FirstSwiftUITests.swift */; };
 		BB55F4C11C1D3FDE004CB092 /* UITextField+Utillities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F4C01C1D3FDE004CB092 /* UITextField+Utillities.swift */; };
 		BB55F4C31C1D4681004CB092 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F4C21C1D4681004CB092 /* Constants.swift */; };
+		BB7D72DF1C31338600B97494 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D72DD1C31338600B97494 /* TableViewCell.swift */; };
+		BB7D72E01C31338600B97494 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB7D72DE1C31338600B97494 /* TableViewCell.xib */; };
 		BBB7EAA41C16B13400290C7B /* DLParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7EAA31C16B13400290C7B /* DLParseManager.swift */; };
 		BBB7EAA61C16B25000290C7B /* DLDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7EAA51C16B25000290C7B /* DLDataModel.swift */; };
 		BBB856241C26C3BF00255C1D /* WalkthroughContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB856221C26C3BF00255C1D /* WalkthroughContainerVC.swift */; };
@@ -110,6 +112,8 @@
 		BB3BB3241C12DCA400E2FC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB55F4C01C1D3FDE004CB092 /* UITextField+Utillities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Utillities.swift"; sourceTree = "<group>"; };
 		BB55F4C21C1D4681004CB092 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BB7D72DD1C31338600B97494 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BB7D72DE1C31338600B97494 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		BBB7EAA31C16B13400290C7B /* DLParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLParseManager.swift; sourceTree = "<group>"; };
 		BBB7EAA51C16B25000290C7B /* DLDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLDataModel.swift; sourceTree = "<group>"; };
 		BBB856221C26C3BF00255C1D /* WalkthroughContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContainerVC.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				BB2350111C15764F00E4D3DC /* StackTableViewCell.swift */,
+				BB7D72DD1C31338600B97494 /* TableViewCell.swift */,
+				BB7D72DE1C31338600B97494 /* TableViewCell.xib */,
 				BB2895B91C196F3900BD950F /* SideViewCell.swift */,
 			);
 			name = Cell;
@@ -428,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBB856291C26C4AB00255C1D /* Main.storyboard in Resources */,
+				BB7D72E01C31338600B97494 /* TableViewCell.xib in Resources */,
 				BB3BB30D1C12DCA400E2FC3E /* LaunchScreen.storyboard in Resources */,
 				BB3BB30A1C12DCA400E2FC3E /* Assets.xcassets in Resources */,
 			);
@@ -459,6 +466,7 @@
 				BB2350181C15904500E4D3DC /* Reachability.swift in Sources */,
 				BB2895C51C197D2F00BD950F /* SAStickyHeaderView+Observe.swift in Sources */,
 				BB2895C61C197D2F00BD950F /* SAStickyHeaderView+Scroll.swift in Sources */,
+				BB7D72DF1C31338600B97494 /* TableViewCell.swift in Sources */,
 				BBB856241C26C3BF00255C1D /* WalkthroughContainerVC.swift in Sources */,
 				BB55F4C31C1D4681004CB092 /* Constants.swift in Sources */,
 				BB55F4C11C1D3FDE004CB092 /* UITextField+Utillities.swift in Sources */,
