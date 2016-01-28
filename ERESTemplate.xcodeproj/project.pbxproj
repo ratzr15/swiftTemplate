@@ -16,6 +16,8 @@
 		BB2350181C15904500E4D3DC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2350171C15904500E4D3DC /* Reachability.swift */; };
 		BB23501B1C1594DF00E4D3DC /* DLSyncServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23501A1C1594DF00E4D3DC /* DLSyncServiceManager.swift */; };
 		BB23501D1C159CAE00E4D3DC /* DLSyncConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23501C1C1598FC00E4D3DC /* DLSyncConstants.swift */; };
+		BB2415421C59DE5A00B7111F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2415411C59DE5A00B7111F /* CloudKit.framework */; };
+		BB2415651C5A04B400B7111F /* PZPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2415641C5A04B400B7111F /* PZPullToRefreshView.swift */; };
 		BB28958E1C1945C100BD950F /* SwiftPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28958D1C1945C100BD950F /* SwiftPages.swift */; };
 		BB2895A41C1951C200BD950F /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2895A31C1951C200BD950F /* SideMenuViewController.swift */; };
 		BB2895B21C1954E200BD950F /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2895A81C1954E200BD950F /* MMDrawerBarButtonItem.m */; };
@@ -77,6 +79,10 @@
 		BB2350171C15904500E4D3DC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		BB23501A1C1594DF00E4D3DC /* DLSyncServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSyncServiceManager.swift; sourceTree = "<group>"; };
 		BB23501C1C1598FC00E4D3DC /* DLSyncConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSyncConstants.swift; sourceTree = "<group>"; };
+		BB2415401C59DE4500B7111F /* ERESTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ERESTemplate.entitlements; sourceTree = "<group>"; };
+		BB2415411C59DE5A00B7111F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		BB2415631C5A04B400B7111F /* PZPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZPullToRefresh.h; sourceTree = "<group>"; };
+		BB2415641C5A04B400B7111F /* PZPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PZPullToRefreshView.swift; sourceTree = "<group>"; };
 		BB28958D1C1945C100BD950F /* SwiftPages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPages.swift; sourceTree = "<group>"; };
 		BB2895A31C1951C200BD950F /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		BB2895A61C1954E100BD950F /* ERESTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ERESTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2415421C59DE5A00B7111F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,9 +225,19 @@
 			name = LibraryManagers;
 			sourceTree = "<group>";
 		};
+		BB24154E1C59FEA400B7111F /* PullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				BB2415631C5A04B400B7111F /* PZPullToRefresh.h */,
+				BB2415641C5A04B400B7111F /* PZPullToRefreshView.swift */,
+			);
+			name = PullToRefresh;
+			sourceTree = "<group>";
+		};
 		BB28958F1C1945C600BD950F /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				BB24154E1C59FEA400B7111F /* PullToRefresh */,
 				BB129A521C27EDD7003E79B7 /* CustomSearchBar */,
 				BB2895C71C197D3400BD950F /* SAStickyHeader */,
 				BB2895B81C1954F200BD950F /* SwiftPages */,
@@ -272,6 +289,8 @@
 		BB3BB2F61C12DCA400E2FC3E = {
 			isa = PBXGroup;
 			children = (
+				BB2415411C59DE5A00B7111F /* CloudKit.framework */,
+				BB2415401C59DE4500B7111F /* ERESTemplate.entitlements */,
 				BB3BB3011C12DCA400E2FC3E /* FirstSwift */,
 				BB3BB3161C12DCA400E2FC3E /* FirstSwiftTests */,
 				BB3BB3211C12DCA400E2FC3E /* FirstSwiftUITests */,
@@ -397,6 +416,12 @@
 				TargetAttributes = {
 					BB3BB2FE1C12DCA400E2FC3E = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 58PD6383K8;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					BB3BB3121C12DCA400E2FC3E = {
 						CreatedOnToolsVersion = 7.1;
@@ -461,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2415651C5A04B400B7111F /* PZPullToRefreshView.swift in Sources */,
 				BBDA8DA21C181D0300EF5707 /* NSDate+Utillities.swift in Sources */,
 				3F6BD63C1C1977B0002781B1 /* RTUtilityClass.swift in Sources */,
 				BB2350181C15904500E4D3DC /* Reachability.swift in Sources */,
@@ -630,11 +656,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ERESTemplate.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FirstSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eres.ae.FirstSwift;
 				PRODUCT_NAME = ERESTemplate;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FirstSwift/ERESTemplate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -645,11 +675,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ERESTemplate.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FirstSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eres.ae.FirstSwift;
 				PRODUCT_NAME = ERESTemplate;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FirstSwift/ERESTemplate-Bridging-Header.h";
 			};
 			name = Release;

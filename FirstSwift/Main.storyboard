@@ -437,6 +437,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="8lO-a3-xFZ" id="Ece-DL-Zbc"/>
+                                    <outlet property="delegate" destination="8lO-a3-xFZ" id="AlS-UA-oah"/>
                                 </connections>
                             </tableView>
                         </subviews>
