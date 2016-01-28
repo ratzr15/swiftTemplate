@@ -51,6 +51,8 @@ class DetailsViewController: UIViewController, UITableViewDataSource,UITableView
         /*Service request Method
         invokeServiceToFetchData()*/
         
+        EKNotificationsView.showNoticeInView(self.view, type: EkNotificationTypeYellow, title: "Please wait while data is loaded....", hideAfter: 20.0, withPresent: false)
+
         //Invoke data fetch from cloud
         getRecordsFromCloud()
         
@@ -172,7 +174,6 @@ class DetailsViewController: UIViewController, UITableViewDataSource,UITableView
         let publicDatabase = cloudContainer.publicCloudDatabase
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Restaurants", predicate: predicate)
-        
         publicDatabase.performQuery(query, inZoneWithID: nil, completionHandler: {
             (results, error) -> Void in
             
@@ -185,6 +186,7 @@ class DetailsViewController: UIViewController, UITableViewDataSource,UITableView
                 print("Completed the download of Restaurant data")
                 self.restaurants = results
                 NSOperationQueue.mainQueue().addOperationWithBlock() {
+                    EKNotificationsView.hideCurrentNotificationView(true)
                     self.tableView.reloadData()
                 }
             }

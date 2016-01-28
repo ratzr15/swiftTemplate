@@ -18,6 +18,9 @@
 		BB23501D1C159CAE00E4D3DC /* DLSyncConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23501C1C1598FC00E4D3DC /* DLSyncConstants.swift */; };
 		BB2415421C59DE5A00B7111F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2415411C59DE5A00B7111F /* CloudKit.framework */; };
 		BB2415651C5A04B400B7111F /* PZPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2415641C5A04B400B7111F /* PZPullToRefreshView.swift */; };
+		BB24156A1C5A15DF00B7111F /* UILabel+UILabelDynamicHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2415691C5A15DF00B7111F /* UILabel+UILabelDynamicHeight.m */; };
+		BB24156D1C5A15E800B7111F /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BB24156C1C5A15E800B7111F /* UIColor+CustomColors.m */; };
+		BB2415701C5A163B00B7111F /* EKNotificationsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB24156F1C5A163B00B7111F /* EKNotificationsView.m */; };
 		BB28958E1C1945C100BD950F /* SwiftPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28958D1C1945C100BD950F /* SwiftPages.swift */; };
 		BB2895A41C1951C200BD950F /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2895A31C1951C200BD950F /* SideMenuViewController.swift */; };
 		BB2895B21C1954E200BD950F /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2895A81C1954E200BD950F /* MMDrawerBarButtonItem.m */; };
@@ -83,6 +86,12 @@
 		BB2415411C59DE5A00B7111F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BB2415631C5A04B400B7111F /* PZPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZPullToRefresh.h; sourceTree = "<group>"; };
 		BB2415641C5A04B400B7111F /* PZPullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PZPullToRefreshView.swift; sourceTree = "<group>"; };
+		BB2415681C5A15DF00B7111F /* UILabel+UILabelDynamicHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+UILabelDynamicHeight.h"; sourceTree = "<group>"; };
+		BB2415691C5A15DF00B7111F /* UILabel+UILabelDynamicHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+UILabelDynamicHeight.m"; sourceTree = "<group>"; };
+		BB24156B1C5A15E800B7111F /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		BB24156C1C5A15E800B7111F /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		BB24156E1C5A163B00B7111F /* EKNotificationsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKNotificationsView.h; sourceTree = "<group>"; };
+		BB24156F1C5A163B00B7111F /* EKNotificationsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKNotificationsView.m; sourceTree = "<group>"; };
 		BB28958D1C1945C100BD950F /* SwiftPages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPages.swift; sourceTree = "<group>"; };
 		BB2895A31C1951C200BD950F /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		BB2895A61C1954E100BD950F /* ERESTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ERESTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -182,6 +191,10 @@
 		BB2350141C158FEC00E4D3DC /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				BB2415681C5A15DF00B7111F /* UILabel+UILabelDynamicHeight.h */,
+				BB2415691C5A15DF00B7111F /* UILabel+UILabelDynamicHeight.m */,
+				BB24156B1C5A15E800B7111F /* UIColor+CustomColors.h */,
+				BB24156C1C5A15E800B7111F /* UIColor+CustomColors.m */,
 				BBE92A301C14268A007C3C03 /* UINavigationController+DLNavCategory.swift */,
 				BBDA8DA11C181D0300EF5707 /* NSDate+Utillities.swift */,
 				BB55F4C01C1D3FDE004CB092 /* UITextField+Utillities.swift */,
@@ -234,15 +247,24 @@
 			name = PullToRefresh;
 			sourceTree = "<group>";
 		};
+		BB2415711C5A163F00B7111F /* PleaseWait */ = {
+			isa = PBXGroup;
+			children = (
+				BB24156E1C5A163B00B7111F /* EKNotificationsView.h */,
+				BB24156F1C5A163B00B7111F /* EKNotificationsView.m */,
+			);
+			name = PleaseWait;
+			sourceTree = "<group>";
+		};
 		BB28958F1C1945C600BD950F /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				BB2415711C5A163F00B7111F /* PleaseWait */,
 				BB24154E1C59FEA400B7111F /* PullToRefresh */,
 				BB129A521C27EDD7003E79B7 /* CustomSearchBar */,
 				BB2895C71C197D3400BD950F /* SAStickyHeader */,
 				BB2895B81C1954F200BD950F /* SwiftPages */,
 				BB2895B71C1954E800BD950F /* MMDrawer */,
-				BB2895A61C1954E100BD950F /* ERESTemplate-Bridging-Header.h */,
 			);
 			name = ThirdParty;
 			sourceTree = "<group>";
@@ -317,6 +339,7 @@
 				BB2350151C158FF800E4D3DC /* Cell */,
 				BB2350141C158FEC00E4D3DC /* Utility */,
 				BB28958F1C1945C600BD950F /* ThirdParty */,
+				BB2895A61C1954E100BD950F /* ERESTemplate-Bridging-Header.h */,
 				BB2350161C15901200E4D3DC /* ResourceManagers */,
 			);
 			path = FirstSwift;
@@ -494,7 +517,10 @@
 				BB2895C61C197D2F00BD950F /* SAStickyHeaderView+Scroll.swift in Sources */,
 				BB7D72DF1C31338600B97494 /* TableViewCell.swift in Sources */,
 				BBB856241C26C3BF00255C1D /* WalkthroughContainerVC.swift in Sources */,
+				BB24156D1C5A15E800B7111F /* UIColor+CustomColors.m in Sources */,
 				BB55F4C31C1D4681004CB092 /* Constants.swift in Sources */,
+				BB2415701C5A163B00B7111F /* EKNotificationsView.m in Sources */,
+				BB24156A1C5A15DF00B7111F /* UILabel+UILabelDynamicHeight.m in Sources */,
 				BB55F4C11C1D3FDE004CB092 /* UITextField+Utillities.swift in Sources */,
 				BB2895C11C197D2F00BD950F /* SAStickyHeaderView.swift in Sources */,
 				BB2895C41C197D2F00BD950F /* SAStickyHeaderView+Image.swift in Sources */,

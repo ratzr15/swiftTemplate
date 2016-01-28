@@ -46,7 +46,6 @@ let happyEmoji = Constants.Emojis.Happy
 println("Swift is fun! \(happyEmoji)") // Swift is fun! 😄
 */
 
-
 // MARK: - ImageNames
 
 let kHomeIconImage  = "home-icon"
