@@ -62,7 +62,7 @@ class DetailsViewController: UIViewController, UITableViewDataSource,UITableView
     func configureCustomSearchController() {
         customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, tableView.frame.size.width, 50.0), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.orangeColor(), searchBarTintColor: UIColor.blackColor())
         
-        customSearchController.customSearchBar.placeholder = "Search in this awesome bar..."
+        customSearchController.customSearchBar.placeholder = "Search.."
         tableView.tableHeaderView = customSearchController.customSearchBar
         
         customSearchController.customDelegate = self
