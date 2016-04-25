@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
             
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             
-            let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+            let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("IntialLoginViewController") as! IntialLoginViewController
             let leftViewController = mainStoryboard.instantiateViewControllerWithIdentifier("SideMenuVC") as! SideMenuViewController
             let rightViewController = mainStoryboard.instantiateViewControllerWithIdentifier("SideMenuVC") as! SideMenuViewController
             

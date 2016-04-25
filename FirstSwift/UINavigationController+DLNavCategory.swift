@@ -31,5 +31,55 @@ extension UINavigationController {
              
 }
     
+    func setNavigationTitle (title: String){
+        self.title = title
+        let font: UIFont = UIFont(name: "Helvetica", size: 22)!
+        self.navigationBar.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: RTUtilityClass.colorFromHex("#246296")]
+        self.navigationBar.translucent = true
+        setupLeftMenuButton()
+        
+        func getColorFromHex(rgbValue:UInt32)->UIColor{
+            let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+            let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+            let blue = CGFloat(rgbValue & 0xFF)/256.0
+            return UIColor(red:red, green:green, blue:blue, alpha:1.0)
+        }
+        
+        self.navigationBar.tintColor = getColorFromHex(0xFFC400)
+        self.navigationBar.barTintColor = getColorFromHex(0xFFC400)
+        
+        let menu = UIImage(imageLiteral: "menu-icon")
+        self.setLeftNavBarBtn(menu, selctedImage: menu, atTarget: self, action:#selector(leftDrawerButtonPress(_:)) , interaction: true)
+        
+    }
+
+    func setupLeftMenuButton() {
+        let leftDrawerButton = MMDrawerBarButtonItem(target: self, action: #selector(leftDrawerButtonPress(_:)))
+        self.navigationItem.setLeftBarButtonItem(leftDrawerButton, animated: true)
+    }
+    
+    func setupRightMenuButton() {
+        let rightDrawerButton = MMDrawerBarButtonItem(target: self, action: #selector(rightDrawerButtonPress(_:)))
+        self.navigationItem.setRightBarButtonItem(rightDrawerButton, animated: true)
+    }
+    
+    // MARK: - Button Handlers
+    
+    func leftDrawerButtonPress(sender: AnyObject?) {
+        self.mm_drawerController?.toggleDrawerSide(.Left, animated: true, completion: nil)
+    }
+    
+    func rightDrawerButtonPress(sender: AnyObject?) {
+        self.mm_drawerController?.toggleDrawerSide(.Right, animated: true, completion: nil)
+    }
+    
+    func doubleTap(gesture: UITapGestureRecognizer) {
+        self.mm_drawerController?.bouncePreviewForDrawerSide(.Left, completion: nil)
+    }
+    
+    func twoFingerDoubleTap(gesture: UITapGestureRecognizer) {
+        self.mm_drawerController?.bouncePreviewForDrawerSide(.Right, completion: nil)
+    }
+
 
 }

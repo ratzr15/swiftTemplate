@@ -193,7 +193,6 @@ class RTUtilityClass: NSObject {
         return label
         
     }
-
     
     class func isUserUsingAnIpad() -> Bool {
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.Pad) {

@@ -51,7 +51,7 @@
 		BBB856251C26C3BF00255C1D /* WalkthroughPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB856231C26C3BF00255C1D /* WalkthroughPageVC.swift */; };
 		BBB856291C26C4AB00255C1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB856281C26C4AB00255C1D /* Main.storyboard */; };
 		BBDA8DA21C181D0300EF5707 /* NSDate+Utillities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDA8DA11C181D0300EF5707 /* NSDate+Utillities.swift */; };
-		BBE92A2F1C140A5B007C3C03 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE92A2E1C140A5B007C3C03 /* SecondViewController.swift */; };
+		BBE92A2F1C140A5B007C3C03 /* IntialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE92A2E1C140A5B007C3C03 /* IntialLoginViewController.swift */; };
 		BBE92A311C14268A007C3C03 /* UINavigationController+DLNavCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE92A301C14268A007C3C03 /* UINavigationController+DLNavCategory.swift */; };
 /* End PBXBuildFile section */
 
@@ -135,7 +135,7 @@
 		BBB856231C26C3BF00255C1D /* WalkthroughPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageVC.swift; sourceTree = "<group>"; };
 		BBB856281C26C4AB00255C1D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BBDA8DA11C181D0300EF5707 /* NSDate+Utillities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utillities.swift"; sourceTree = "<group>"; };
-		BBE92A2E1C140A5B007C3C03 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BBE92A2E1C140A5B007C3C03 /* IntialLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntialLoginViewController.swift; sourceTree = "<group>"; };
 		BBE92A301C14268A007C3C03 /* UINavigationController+DLNavCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+DLNavCategory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,8 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				BBB856281C26C4AB00255C1D /* Main.storyboard */,
+				BBE92A2E1C140A5B007C3C03 /* IntialLoginViewController.swift */,
 				BB3BB3041C12DCA400E2FC3E /* ViewController.swift */,
-				BBE92A2E1C140A5B007C3C03 /* SecondViewController.swift */,
 				BB23500F1C15638900E4D3DC /* DetailsViewController.swift */,
 				BB2895A31C1951C200BD950F /* SideMenuViewController.swift */,
 				BBB856221C26C3BF00255C1D /* WalkthroughContainerVC.swift */,
@@ -527,7 +527,7 @@
 				BB129A511C27EDC1003E79B7 /* CustomSearchController.swift in Sources */,
 				BB2895B31C1954E200BD950F /* MMDrawerController.m in Sources */,
 				BB28958E1C1945C100BD950F /* SwiftPages.swift in Sources */,
-				BBE92A2F1C140A5B007C3C03 /* SecondViewController.swift in Sources */,
+				BBE92A2F1C140A5B007C3C03 /* IntialLoginViewController.swift in Sources */,
 				BB2895A41C1951C200BD950F /* SideMenuViewController.swift in Sources */,
 				BBB7EAA61C16B25000290C7B /* DLDataModel.swift in Sources */,
 				BB2895BA1C196F3900BD950F /* SideViewCell.swift in Sources */,

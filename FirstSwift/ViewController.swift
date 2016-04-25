@@ -13,10 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var swiftPagesViewController: SwiftPages!
     override func viewDidLoad() {
         super.viewDidLoad()        
-        setNavigationTitle("Swift Me !!")
+        self.navigationController?.setNavigationTitle("Login")
 
-        let VCIDs : [String] = ["SecondViewController", "DetailsViewController"]
-        let buttonTitles : [String] = ["Home", "Places"]
+        let VCIDs : [String] = ["DetailsViewController"]
+        let buttonTitles : [String] = ["Places"]
         swiftPagesViewController.initializeWithVCIDsArrayAndButtonTitlesArray(VCIDs, buttonTitlesArray: buttonTitles)
 
         
@@ -38,86 +38,26 @@ class ViewController: UIViewController {
         alertController.addAction(destroyAction)
         
         let OKAction = UIAlertAction(title: "Yes", style: .Default) { (action) in
-            self.performSegueWithIdentifier("SecondVC", sender: self)
+            self.performSegueWithIdentifier("IntialLoginViewController", sender: self)
         }
         alertController.addAction(OKAction)
       
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    
+    @IBAction func actionSignUp(sender: AnyObject) {
+        self.performSegueWithIdentifier("mainVC", sender: self)
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let hasViewedWalkthrough = defaults.boolForKey("hasViewedWalkthrough")
+        let parserManager = DLParserManager()
+        parserManager.sharedInstance()
         
-        if hasViewedWalkthrough {
-            return
-        }
-        
-        if let pageViewController =
-            storyboard?.instantiateViewControllerWithIdentifier("WalkthroughController")
-                as? WalkthroughPageVC {
-                    presentViewController(pageViewController, animated: true, completion: nil)
-        }
     }
     
-
-    func setupLeftMenuButton() {
-        let leftDrawerButton = MMDrawerBarButtonItem(target: self, action: "leftDrawerButtonPress:")
-        self.navigationItem.setLeftBarButtonItem(leftDrawerButton, animated: true)
-    }
-    
-    func setupRightMenuButton() {
-        let rightDrawerButton = MMDrawerBarButtonItem(target: self, action: "rightDrawerButtonPress:")
-        self.navigationItem.setRightBarButtonItem(rightDrawerButton, animated: true)
-    }
-    
-    
-    func setNavigationTitle (title: String){
-        self.title = title
-        let font: UIFont = UIFont(name: "Helvetica", size: 18)!
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        self.navigationController?.navigationBar.translucent = false
-        setupLeftMenuButton()
-   
-        func getColorFromHex(rgbValue:UInt32)->UIColor{
-            let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
-            let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
-            let blue = CGFloat(rgbValue & 0xFF)/256.0
-            return UIColor(red:red, green:green, blue:blue, alpha:1.0)
-        }
-        
-        self.navigationController?.navigationBar.tintColor = getColorFromHex(0xffffff)
-        self.navigationController?.navigationBar.barTintColor = getColorFromHex(0x102592)
-
-        let menu = UIImage(imageLiteral: "menu-icon")
-        self.navigationController!.setLeftNavBarBtn(menu, selctedImage: menu, atTarget: self, action:"leftDrawerButtonPress:" , interaction: true)
-
-        
-          }
-    
-    // MARK: - Button Handlers
-    
-    func leftDrawerButtonPress(sender: AnyObject?) {
-        self.mm_drawerController?.toggleDrawerSide(.Left, animated: true, completion: nil)
-    }
-    
-    func rightDrawerButtonPress(sender: AnyObject?) {
-        self.mm_drawerController?.toggleDrawerSide(.Right, animated: true, completion: nil)
-    }
-    
-    func doubleTap(gesture: UITapGestureRecognizer) {
-        self.mm_drawerController?.bouncePreviewForDrawerSide(.Left, completion: nil)
-    }
-    
-    func twoFingerDoubleTap(gesture: UITapGestureRecognizer) {
-        self.mm_drawerController?.bouncePreviewForDrawerSide(.Right, completion: nil)
-    }
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "SecondVC"){
-            _ = segue.destinationViewController as! SecondViewController
+        if(segue.identifier == "DetailsVC"){
+            _ = segue.destinationViewController as! DetailsViewController
         }
     }
 }
