@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 
-class IntialLoginViewController: UIViewController {
+class IntialLoginViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = RTUtilityClass.colorFromHex("#FFC400");        
-        self.navigationController?.setNavigationTitle("Login")
+        self.navigationController!.setNavigationTitle("Login", needBackBtn: false)
 
     }
     
@@ -35,5 +35,7 @@ class IntialLoginViewController: UIViewController {
             presentViewController(pageViewController, animated: true, completion: nil)
         }
     }
+    
+
 
 }

@@ -14,10 +14,10 @@ extension UINavigationController {
     /*!
     *	breif	:	setLeftNavBarBtn - Sets up navigation button -left/right with specified image
     *	param	:	[UIImage] - selecteddimg*     , img when button is pressed
-    *          :	[UIImage] - image*    , target img
-    *  retun   :   void
-    *  dated   :   7th Dec 2015
-    *  author  :   rathish_citys@eres.com
+    *           :	[UIImage] - image*    , target img
+    *  retun    :   void
+    *  dated    :   7th Dec 2015
+    *  author   :   rathish_citys@eres.com
     */
 
     func setLeftNavBarBtn (image:UIImage, selctedImage:UIImage, atTarget:AnyObject, action:Selector, interaction:Bool){
@@ -25,17 +25,18 @@ extension UINavigationController {
         button.userInteractionEnabled = true;
         button.setBackgroundImage(image, forState: UIControlState.Normal)
         button.setBackgroundImage(image, forState: UIControlState.Selected)
-        button.frame = CGRectMake(0, 0,  image.size.width,  image.size.width)
+        button.frame = CGRectMake(0, 0,  image.size.width,  image.size.height)
         button .addTarget(atTarget, action: action, forControlEvents: UIControlEvents.TouchUpInside)
-        self.topViewController?.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+        self.visibleViewController?.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
              
 }
     
-    func setNavigationTitle (title: String){
+    func setNavigationTitle (title: String, needBackBtn:Bool){
         self.title = title
         let font: UIFont = UIFont(name: "Helvetica", size: 22)!
-        self.navigationBar.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: RTUtilityClass.colorFromHex("#246296")]
+        self.navigationBar.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: RTUtilityClass.colorFromHex("246296")]
         self.navigationBar.translucent = true
+       
         setupLeftMenuButton()
         
         func getColorFromHex(rgbValue:UInt32)->UIColor{
@@ -47,12 +48,29 @@ extension UINavigationController {
         
         self.navigationBar.tintColor = getColorFromHex(0xFFC400)
         self.navigationBar.barTintColor = getColorFromHex(0xFFC400)
-        
-        let menu = UIImage(imageLiteral: "menu-icon")
-        self.setLeftNavBarBtn(menu, selctedImage: menu, atTarget: self, action:#selector(leftDrawerButtonPress(_:)) , interaction: true)
-        
-    }
+       
+        if needBackBtn {
+            
+            let backBtn = UIImage(imageLiteral: "back-btn-en")
+            self.setLeftNavBarBtn(backBtn, selctedImage: backBtn, atTarget: self, action:#selector(popToPreviousViewController) , interaction: true)
+            
 
+        }else{
+            
+            let menu = UIImage(imageLiteral: "menu-icon")
+            self.setLeftNavBarBtn(menu, selctedImage: menu, atTarget: self, action:#selector(leftDrawerButtonPress(_:)) , interaction: true)
+            
+
+        }
+        self.visibleViewController!.title = title;
+
+    }
+    
+
+    func popToPreviousViewController(sender: AnyObject?) {
+        self.popViewControllerAnimated(true)
+    }
+    
     func setupLeftMenuButton() {
         let leftDrawerButton = MMDrawerBarButtonItem(target: self, action: #selector(leftDrawerButtonPress(_:)))
         self.navigationItem.setLeftBarButtonItem(leftDrawerButton, animated: true)

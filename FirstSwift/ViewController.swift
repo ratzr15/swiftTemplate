@@ -11,13 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var swiftPagesViewController: SwiftPages!
+    
     override func viewDidLoad() {
         super.viewDidLoad()        
-        self.navigationController?.setNavigationTitle("Login")
+        self.navigationController?.setNavigationTitle("Restaurants Around Me", needBackBtn: true)
 
         let VCIDs : [String] = ["DetailsViewController"]
         let buttonTitles : [String] = ["Places"]
-        swiftPagesViewController.initializeWithVCIDsArrayAndButtonTitlesArray(VCIDs, buttonTitlesArray: buttonTitles)
+        swiftPagesViewController?.initializeWithVCIDsArrayAndButtonTitlesArray(VCIDs, buttonTitlesArray: buttonTitles)
 
         
     }

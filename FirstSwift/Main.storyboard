@@ -196,7 +196,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBU-Kz-vjD">
                                 <rect key="frame" x="0.0" y="491" width="600" height="44"/>
-                                <color key="backgroundColor" red="1" green="0.3957843687" blue="0.087698267390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.02287176724137931" green="0.5" blue="0.13458726600689655" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="9Jf-wO-6gA"/>
                                     <constraint firstAttribute="width" constant="560" id="RUp-TH-RaL"/>
@@ -221,7 +221,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUv-Ln-ies">
                                 <rect key="frame" x="0.0" y="546" width="600" height="44"/>
-                                <color key="backgroundColor" red="0.16078431369999999" green="0.85490196080000003" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.15708512931034482" green="0.63570893766551662" blue="0.96183619842448276" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Ct8-hF-NbK"/>
                                     <constraint firstAttribute="width" constant="561" id="ptB-HD-Stu"/>
@@ -241,7 +241,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="WYw-7K-5S5"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="mTy-M9-cCk"/>
                                 </connections>
                             </button>
                         </subviews>
